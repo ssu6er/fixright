@@ -10,7 +10,7 @@ const togglePw = document.getElementById("toggle-pw");
 const pwInput = document.getElementById("password");
 
 if (sessionStorage.getItem("auth_token")) {
-  window.location.replace("admin.html");
+  window.location.replace("/admin/admin.html");
 }
 
 togglePw.addEventListener("click", () => {
@@ -57,7 +57,7 @@ form.addEventListener("submit", async (event) => {
     if (response.ok) {
       sessionStorage.setItem("auth_token", token);
       sessionStorage.setItem("auth_user", username);
-      window.location.replace("admin.html");
+      window.location.replace("/admin/admin.html");
     } else if (response.status === 401) {
       showAlert("Nieprawidłowy login lub hasło. Spróbuj ponownie.");
       document.getElementById("password").value = "";

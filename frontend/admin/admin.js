@@ -31,7 +31,7 @@ function clearSession() {
 }
 
 if (!getToken()) {
-  window.location.replace("login.html");
+  window.location.replace("/admin/login.html");
 }
 
 function authFetch(url, options = {}) {
@@ -76,7 +76,7 @@ async function loadBookings() {
 
     if (response.status === 401) {
       clearSession();
-      window.location.replace("login.html");
+      window.location.replace("/admin/login.html");
       return;
     }
 
@@ -250,7 +250,7 @@ detailForm.addEventListener("submit", async (event) => {
 
     if (response.status === 401) {
       clearSession();
-      window.location.replace("login.html");
+      window.location.replace("/admin/login.html");
       return;
     }
 
@@ -288,7 +288,7 @@ document.getElementById("retry-btn").addEventListener("click", () => {
 
 document.getElementById("btn-signout").addEventListener("click", () => {
   clearSession();
-  window.location.replace("login.html");
+  window.location.replace("/admin/login.html");
 });
 
 searchEl.addEventListener("input", applyFilters);
