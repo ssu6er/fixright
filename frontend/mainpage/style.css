@@ -106,6 +106,16 @@ button, input, textarea { font: inherit; }
   transform: translateY(-1px);
 }
 .phone-icon { font-size: 0.95rem; }
+.ui-icon {
+  width: 1em;
+  height: 1em;
+  display: block;
+  fill: currentColor;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
 .header-cta {
   display: inline-flex;
   align-items: center;
@@ -310,6 +320,15 @@ section, footer { scroll-margin-top: 92px; }
 .service-card { padding: 2rem; text-align: center; }
 .service-card .icon { width: 72px; height: 72px; margin: 0 auto 1.1rem; display: flex; align-items: center; justify-content: center; border-radius: 18px; background: #eef4f8; }
 .service-card .icon img { width: 54px; height: 54px; object-fit: contain; }
+.service-icon {
+  width: 54px;
+  height: 54px;
+  fill: none;
+  stroke: var(--clr-primary);
+  stroke-width: 2.4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
 .service-card h3 { font-family: var(--font-main); font-size: 1.05rem; margin-bottom: 0.55rem; color: var(--clr-ink); }
 .service-card p { font-size: 0.93rem; color: var(--clr-ink-muted); }
 
@@ -502,6 +521,14 @@ section, footer { scroll-margin-top: 92px; }
 .footer-col h4::after { content: ''; position: absolute; left: 0; bottom: 0; width: 42px; height: 3px; border-radius: 99px; background: var(--clr-accent); }
 .footer-col p,
 .footer-col a { display: block; font-size: 0.92rem; color: var(--clr-ink-muted); margin-bottom: 0.5rem; }
+.contact-icon {
+  display: inline-flex;
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.45rem;
+  vertical-align: -0.12rem;
+  color: var(--clr-primary);
+}
 .footer-col a:hover { color: var(--clr-primary); }
 .footer-service-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; padding: 1rem 1.5rem 2rem; }
 .footer-badge { background: #ffffff; border: 1px solid var(--clr-border); border-radius: 12px; padding: 1rem; text-align: center; font-family: var(--font-main); font-weight: 700; color: var(--clr-ink); box-shadow: var(--shadow-sm); }
