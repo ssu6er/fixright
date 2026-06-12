@@ -270,8 +270,10 @@
                 <option value="dryer">Suszarka</option>
                 <option value="other">Inne urządzenie</option>
               </select>
+              <span class="form-error" id="appliance-error"></span>
             </div>
             <div class="form-group"><textarea id="problem_description" name="problem_description" class="form-input form-textarea" rows="4" placeholder="Opisz problem *"></textarea><span class="form-error" id="problem-error"></span></div>
+            <div class="form-alert" id="form-alert" hidden></div>
             <button type="submit" class="btn btn-primary btn-full" id="submit-btn"><span class="btn-text">Wyślij zgłoszenie &rarr;</span><span class="btn-loader" hidden>Wysyłanie...</span></button>
           </form>
           <div class="form-success" id="form-success" hidden>

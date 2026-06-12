@@ -1,75 +1,199 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FixRight — Admin</title>
+  <title>FixRight - Panel administracyjny</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="admin.css" />
 </head>
 <body>
-
-  <header class="header">
-    <div class="header-logo">
-      Fix<em>Right</em>
-      <span class="header-tag">Admin</span>
+  <header class="admin-header">
+    <div class="container admin-header-inner">
+      <a href="/" class="admin-logo">Fix<strong>Right</strong><span>Panel</span></a>
+      <div class="admin-header-actions">
+        <span class="admin-user">Zalogowano jako <strong id="header-user">admin</strong></span>
+        <a href="/" class="admin-link">Strona główna</a>
+        <button class="admin-ghost-btn" id="btn-signout" type="button">Wyloguj</button>
+      </div>
     </div>
-    <div class="header-right"><span class="header-user-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg><span id="header-user">admin</span></span><button class="btn-signout" id="btn-signout">Sign Out</button><a href="/" class="header-back">← Site</a></div>
   </header>
 
-  <main class="page">
+  <main class="admin-page">
+    <section class="admin-hero">
+      <div class="container admin-hero-inner">
+        <div>
+          <span class="eyebrow">Centrum obsługi zgłoszeń</span>
+          <h1>Nowoczesna administracja zgłoszeniami serwisowymi</h1>
+          <p>Przeglądaj nowe zapytania, zmieniaj status realizacji i prowadź notatki dla zespołu bez wychodzenia z panelu.</p>
+        </div>
+        <div class="hero-meta">
+          <div class="hero-meta-card">
+            <span>Ostatnia synchronizacja</span>
+            <strong id="last-updated">--:--</strong>
+          </div>
+          <div class="hero-meta-card">
+            <span>Widocznych zgłoszeń</span>
+            <strong id="count-pill">0</strong>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <div class="toolbar">
-      <div class="toolbar-left">
-        <h1>Repair Requests</h1>
-        <p>All requests submitted via the website form</p>
-      </div>
-      <div class="toolbar-right">
-        <span class="count-pill" id="count-pill">…</span>
-        <input
-          type="search"
-          class="search"
-          id="search"
-          placeholder="Search by name or phone…"
-        />
-        <button class="btn btn-outline" id="btn-refresh">↻ Refresh</button>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="table-scroll" id="table-wrap">
-        <table>
-          <thead>
-            <tr>
-              <th>#</th>
-              <th>Name</th>
-              <th>Phone</th>
-              <th>Problem Description</th>
-              <th>Request Date</th>
-            </tr>
-          </thead>
-          <tbody id="tbody"></tbody>
-        </table>
+    <section class="container admin-content">
+      <div class="stats-grid" id="stats-grid">
+        <article class="stat-card">
+          <span>Wszystkie</span>
+          <strong id="stat-total">0</strong>
+          <p>Pełna liczba zgłoszeń w panelu.</p>
+        </article>
+        <article class="stat-card">
+          <span>Nowe</span>
+          <strong id="stat-new">0</strong>
+          <p>Zgłoszenia wymagające pierwszej reakcji.</p>
+        </article>
+        <article class="stat-card">
+          <span>W realizacji</span>
+          <strong id="stat-active">0</strong>
+          <p>Sprawy zaplanowane lub aktualnie prowadzone.</p>
+        </article>
+        <article class="stat-card">
+          <span>Zakończone</span>
+          <strong id="stat-completed">0</strong>
+          <p>Naprawy zamknięte lub anulowane.</p>
+        </article>
       </div>
 
-      <div class="state" id="state-loading">
-        <p>Loading requests…</p>
-      </div>
-      <div class="state" id="state-empty" hidden>
-        <p>No requests yet.</p>
-      </div>
-      <div class="state" id="state-error" hidden>
-        <p id="error-text">Failed to load requests.</p>
-        <span class="retry" id="retry-btn">Try again</span>
+      <div class="toolbar-card">
+        <div class="toolbar-copy">
+          <h2>Lista zgłoszeń</h2>
+          <p>Możesz wyszukiwać po kliencie, telefonie, e-mailu i opisie problemu.</p>
+        </div>
+        <div class="toolbar-controls">
+          <input type="search" class="control-input search-input" id="search" placeholder="Szukaj po kliencie, numerze lub opisie" />
+          <select class="control-input filter-input" id="status-filter">
+            <option value="">Wszystkie statusy</option>
+            <option value="new">Nowe</option>
+            <option value="scheduled">Zaplanowane</option>
+            <option value="in_progress">W realizacji</option>
+            <option value="completed">Zakończone</option>
+            <option value="cancelled">Anulowane</option>
+          </select>
+          <button class="admin-primary-btn" id="btn-refresh" type="button">Odśwież dane</button>
+        </div>
       </div>
 
-      <div class="card-footer" id="card-footer" hidden>
-        <span id="footer-text"></span>
-        <span>Updated: <span id="last-updated">—</span></span>
-      </div>
-    </div>
+      <div class="workspace-grid">
+        <section class="surface-card table-card">
+          <div class="table-scroll" id="table-wrap" hidden>
+            <table>
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Klient</th>
+                  <th>Urządzenie</th>
+                  <th>Kontakt</th>
+                  <th>Status</th>
+                  <th>Data</th>
+                </tr>
+              </thead>
+              <tbody id="tbody"></tbody>
+            </table>
+          </div>
 
+          <div class="state-block" id="state-loading">
+            <h3>Trwa pobieranie zgłoszeń</h3>
+            <p>Za chwilę pokażemy aktualną listę rezerwacji serwisowych.</p>
+          </div>
+          <div class="state-block" id="state-empty" hidden>
+            <h3>Brak zgłoszeń</h3>
+            <p>Gdy pojawią się nowe formularze z witryny, zobaczysz je tutaj.</p>
+          </div>
+          <div class="state-block" id="state-error" hidden>
+            <h3>Nie udało się połączyć z API</h3>
+            <p id="error-text">Spróbuj ponownie za chwilę.</p>
+            <button class="admin-ghost-btn" id="retry-btn" type="button">Spróbuj ponownie</button>
+          </div>
+
+          <div class="table-footer" id="card-footer" hidden>
+            <span id="footer-text">Pokazano 0 zgłoszeń</span>
+            <span>Kliknij wiersz, aby otworzyć szczegóły.</span>
+          </div>
+        </section>
+
+        <aside class="surface-card details-card" id="details-card">
+          <div id="details-empty" class="details-empty">
+            <span class="eyebrow">Szczegóły zgłoszenia</span>
+            <h3>Wybierz zgłoszenie z listy</h3>
+            <p>Po prawej stronie pokażemy dane klienta, opis awarii oraz pola do aktualizacji statusu i notatek.</p>
+          </div>
+
+          <div id="details-content" hidden>
+            <div class="details-head">
+              <div>
+                <span class="eyebrow">Zgłoszenie <span id="detail-id-label">#0</span></span>
+                <h3 id="detail-name">Klient</h3>
+              </div>
+              <span class="status-badge" id="detail-status-badge">Nowe</span>
+            </div>
+
+            <dl class="details-grid">
+              <div>
+                <dt>Telefon</dt>
+                <dd id="detail-phone">-</dd>
+              </div>
+              <div>
+                <dt>E-mail</dt>
+                <dd id="detail-email">-</dd>
+              </div>
+              <div>
+                <dt>Urządzenie</dt>
+                <dd id="detail-appliance">-</dd>
+              </div>
+              <div>
+                <dt>Dodano</dt>
+                <dd id="detail-created">-</dd>
+              </div>
+              <div>
+                <dt>Ostatnia zmiana</dt>
+                <dd id="detail-updated">-</dd>
+              </div>
+            </dl>
+
+            <div class="detail-section">
+              <h4>Opis problemu</h4>
+              <p id="detail-problem" class="detail-copy">-</p>
+            </div>
+
+            <form id="detail-form" class="detail-form">
+              <div class="detail-section">
+                <label for="detail-status">Status realizacji</label>
+                <select id="detail-status" class="control-input">
+                  <option value="new">Nowe</option>
+                  <option value="scheduled">Zaplanowane</option>
+                  <option value="in_progress">W realizacji</option>
+                  <option value="completed">Zakończone</option>
+                  <option value="cancelled">Anulowane</option>
+                </select>
+              </div>
+
+              <div class="detail-section">
+                <label for="detail-notes">Notatki wewnętrzne</label>
+                <textarea id="detail-notes" class="detail-textarea" rows="8" placeholder="Dodaj ustalenia dla zespołu, termin wizyty albo informację o częściach."></textarea>
+              </div>
+
+              <div class="detail-alert" id="detail-alert" hidden></div>
+
+              <div class="detail-actions">
+                <button class="admin-primary-btn" id="btn-save" type="submit">Zapisz zmiany</button>
+                <button class="admin-ghost-btn" id="btn-reset-detail" type="button">Przywróć dane</button>
+              </div>
+            </form>
+          </div>
+        </aside>
+      </div>
+    </section>
   </main>
 
   <script src="admin.js"></script>

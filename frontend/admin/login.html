@@ -1,82 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FixRight — Admin Sign In</title>
+  <title>FixRight - Logowanie do panelu</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="login.css" />
 </head>
 <body>
+  <div class="login-shell">
+    <a href="/" class="back-link">Wróć do strony głównej</a>
 
-  <div class="bg-grid"></div>
+    <section class="login-card">
+      <span class="eyebrow">FixRight Admin</span>
+      <h1>Zaloguj się do panelu zgłoszeń</h1>
+      <p>Panel administracyjny służy do obsługi zgłoszeń serwisowych i jest dostępny wyłącznie dla uprawnionych osób.</p>
 
-  <div class="wrap">
-
-    <a href="/" class="back-link">← Back to website</a>
-
-    <div class="card">
-
-      <div class="card-brand">
-        <span class="logo">Fix<strong>Right</strong></span>
-        <span class="badge">Admin Panel</span>
-      </div>
-
-      <h1 class="card-title">Sign in to continue</h1>
-      <p class="card-sub">Access is restricted to authorized staff only.</p>
-
-      <form id="login-form" novalidate>
-
-        <div class="field" id="field-username">
-          <label for="username">Username</label>
-          <input
-            type="text"
-            id="username"
-            name="username"
-            autocomplete="username"
-            placeholder="admin"
-            spellcheck="false"
-          />
+      <form id="login-form" class="login-form" novalidate>
+        <div class="field">
+          <label for="username">Login</label>
+          <input type="text" id="username" name="username" autocomplete="username" placeholder="admin" />
           <span class="field-error" id="username-error"></span>
         </div>
 
-        <div class="field" id="field-password">
-          <label for="password">Password</label>
-          <div class="password-wrap">
-            <input
-              type="password"
-              id="password"
-              name="password"
-              autocomplete="current-password"
-              placeholder="••••••••••"
-            />
-            <button type="button" class="toggle-pw" id="toggle-pw" aria-label="Show password">
-              <svg id="eye-show" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
-              <svg id="eye-hide" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" hidden><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/><line x1="1" y1="1" x2="23" y2="23"/></svg>
-            </button>
+        <div class="field">
+          <label for="password">Hasło</label>
+          <div class="password-row">
+            <input type="password" id="password" name="password" autocomplete="current-password" placeholder="Wpisz hasło" />
+            <button type="button" class="text-toggle" id="toggle-pw">Pokaż</button>
           </div>
           <span class="field-error" id="password-error"></span>
         </div>
 
-        <div class="alert" id="alert-error" hidden>
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-          <span id="alert-text">Invalid username or password.</span>
+        <div class="form-alert" id="alert-error" hidden>
+          <span id="alert-text">Nieprawidłowy login lub hasło.</span>
         </div>
 
-        <button type="submit" class="btn-submit" id="btn-submit">
-          <span class="btn-label">Sign In</span>
-          <span class="btn-spinner" hidden>
-            <svg class="spin" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg>
-          </span>
+        <button type="submit" class="login-btn" id="btn-submit">
+          <span class="btn-label">Zaloguj</span>
+          <span class="btn-spinner" hidden>Sprawdzanie...</span>
         </button>
-
       </form>
-
-    </div>
-
-    <p class="footer-note">FixRight Appliance Repair LLC &nbsp;·&nbsp; Admin Access</p>
-
+    </section>
   </div>
 
   <script src="login.js"></script>
