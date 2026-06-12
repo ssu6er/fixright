@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FixRight — Trusted Appliance Repair</title>
+  <title>FixRight - Zaufany serwis AGD</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
@@ -11,39 +11,26 @@
 <body>
   <header class="site-header" id="site-header">
     <div class="container header-inner">
-      <a href="#home" class="logo" aria-label="FixRight Home">
-        <img src="logo.svg" alt="FixRight Logo" class="logo-img">
+      <a href="#home" class="logo" aria-label="FixRight strona główna">
+        <img src="logo.svg" alt="Logo FixRight" class="logo-img" />
         <span class="logo-text">Fix<strong>Right</strong></span>
       </a>
 
       <div class="header-actions">
-        <nav class="nav" role="navigation" aria-label="Main navigation">
-          <a href="#home" class="nav-link" data-i18n="nav.home">Home</a>
-          <a href="#services" class="nav-link" data-i18n="nav.services">Services</a>
-          <a href="#about" class="nav-link" data-i18n="nav.about">About Us</a>
-          <a href="#prices" class="nav-link" data-i18n="nav.prices">Prices</a>
-          <a href="#booking" class="nav-link" data-i18n="nav.contact">Contact</a>
-          <a href="tel:+48221234567" class="header-phone" aria-label="Call FixRight">
-            <span class="phone-icon">☎</span>
+        <nav class="nav" role="navigation" aria-label="Nawigacja główna">
+          <a href="#home" class="nav-link">Start</a>
+          <a href="#services" class="nav-link">Usługi</a>
+          <a href="#about" class="nav-link">O nas</a>
+          <a href="#prices" class="nav-link">Cennik</a>
+          <a href="#booking" class="nav-link">Kontakt</a>
+          <a href="tel:+48221234567" class="header-phone" aria-label="Zadzwoń do FixRight">
+            <span class="phone-icon">&#9742;</span>
             <span class="phone-text">+48 22 123 45 67</span>
           </a>
-          <a href="#booking" class="header-cta" data-i18n="header.cta">Book technician</a>
-
-          <div class="language-menu" id="language-menu">
-            <button class="language-btn" type="button" id="language-btn" aria-haspopup="true" aria-expanded="false">
-              <span class="language-flag" id="current-flag">🇺🇸</span>
-              <span class="language-label" id="current-lang">EN</span>
-              <span class="language-arrow">▾</span>
-            </button>
-            <div class="language-dropdown" id="language-dropdown" role="menu">
-              <button type="button" class="language-option active" data-lang="en" data-flag="🇺🇸" data-label="EN" role="menuitem"><span>🇺🇸</span><span>English</span></button>
-              <button type="button" class="language-option" data-lang="pl" data-flag="🇵🇱" data-label="PL" role="menuitem"><span>🇵🇱</span><span>Polski</span></button>
-              <button type="button" class="language-option" data-lang="uk" data-flag="🇺🇦" data-label="UA" role="menuitem"><span>🇺🇦</span><span>Українська</span></button>
-            </div>
-          </div>
+          <a href="#booking" class="header-cta">Umów wizytę</a>
         </nav>
 
-        <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" id="hamburger" type="button">
+        <button class="hamburger" aria-label="Przełącz menu" aria-expanded="false" id="hamburger" type="button">
           <span></span><span></span><span></span>
         </button>
       </div>
@@ -55,11 +42,11 @@
       <div class="hero-bg"></div>
       <div class="container hero-inner">
         <div class="hero-content">
-          <h1 class="hero-title" data-i18n="hero.title">Trusted appliance repair in Warsaw, Kraków and nearby areas<br><span>Fast diagnostics, clear pricing and reliable in-home service.</span></h1>
-          <p class="hero-subtitle" data-i18n="hero.subtitle">We repair refrigerators, washing machines, dishwashers, ovens and stoves. Book a visit and get a professional estimate before any repair starts.</p>
+          <h1 class="hero-title">Profesjonalna naprawa AGD w Warszawie, Krakowie i okolicach<br /><span>Szybka diagnoza, jasna wycena i solidny serwis u klienta.</span></h1>
+          <p class="hero-subtitle">Naprawiamy lodówki, pralki, zmywarki, piekarniki i kuchenki. Umów wizytę i poznaj koszt przed rozpoczęciem naprawy.</p>
           <div class="hero-actions">
-            <a href="#booking" class="btn btn-primary" data-i18n="hero.book">Book service now</a>
-            <a href="#services" class="btn btn-blue" data-i18n="hero.learn">Learn more</a>
+            <a href="#booking" class="btn btn-primary">Zamów serwis</a>
+            <a href="#services" class="btn btn-blue">Zobacz usługi</a>
           </div>
         </div>
       </div>
@@ -68,86 +55,85 @@
     <section class="services" id="services">
       <div class="container">
         <div class="section-header">
-          <span class="section-kicker" data-i18n="services.kicker">What we repair</span>
-          <h2 class="section-title" data-i18n="services.title">Our Services</h2>
-          <p data-i18n="services.subtitle">Professional in-home repair for the most important household appliances.</p>
+          <span class="section-kicker">Co naprawiamy</span>
+          <h2 class="section-title">Nasze usługi</h2>
+          <p>Profesjonalna naprawa najważniejszych urządzeń domowych bezpośrednio u klienta.</p>
         </div>
         <div class="services-grid">
           <article class="service-card">
-            <div class="icon"><img src="refrigerator.svg" alt="Refrigerator"></div>
-            <h3 data-i18n="services.fridge.title">Refrigerator repair</h3>
-            <p data-i18n="services.fridge.text">Cooling problems, leaks, compressors, thermostats and noisy operation.</p>
-            <a href="#booking" class="btn btn-card" data-i18n="services.card.button">Book repair</a>
+            <div class="icon"><img src="refrigerator.svg" alt="Lodówka" /></div>
+            <h3>Naprawa lodówek</h3>
+            <p>Problemy z chłodzeniem, wycieki, sprężarki, termostaty i głośna praca.</p>
+            <a href="#booking" class="btn btn-card">Umów naprawę</a>
           </article>
           <article class="service-card">
-            <div class="icon"><img src="washer.svg" alt="Washing Machine"></div>
-            <h3 data-i18n="services.washer.title">Washing machine repair</h3>
-            <p data-i18n="services.washer.text">Drainage issues, leaks, spin problems, motors, pumps and door locks.</p>
-            <a href="#booking" class="btn btn-card" data-i18n="services.card.button">Book repair</a>
+            <div class="icon"><img src="washer.svg" alt="Pralka" /></div>
+            <h3>Naprawa pralek</h3>
+            <p>Problemy z odpływem, wycieki, wirowanie, silniki, pompy i blokady drzwi.</p>
+            <a href="#booking" class="btn btn-card">Umów naprawę</a>
           </article>
           <article class="service-card">
-            <div class="icon"><img src="oven.svg" alt="Oven"></div>
-            <h3 data-i18n="services.oven.title">Oven & stove repair</h3>
-            <p data-i18n="services.oven.text">Heating elements, ignition problems, sensors and control modules.</p>
-            <a href="#booking" class="btn btn-card" data-i18n="services.card.button">Book repair</a>
+            <div class="icon"><img src="oven.svg" alt="Piekarnik" /></div>
+            <h3>Naprawa piekarników i kuchenek</h3>
+            <p>Grzałki, zapłon, czujniki temperatury oraz moduły sterujące.</p>
+            <a href="#booking" class="btn btn-card">Umów naprawę</a>
           </article>
           <article class="service-card">
-            <div class="icon"><img src="dishwasher.svg" alt="Dishwasher"></div>
-            <h3 data-i18n="services.dishwasher.title">Dishwasher repair</h3>
-            <p data-i18n="services.dishwasher.text">Water intake, drainage, leaks, washing quality and error codes.</p>
-            <a href="#booking" class="btn btn-card" data-i18n="services.card.button">Book repair</a>
+            <div class="icon"><img src="dishwasher.svg" alt="Zmywarka" /></div>
+            <h3>Naprawa zmywarek</h3>
+            <p>Pobór wody, odpływ, przecieki, jakość mycia i kody błędów.</p>
+            <a href="#booking" class="btn btn-card">Umów naprawę</a>
           </article>
         </div>
       </div>
     </section>
 
-
     <section class="pricing-section" id="prices">
       <div class="container">
         <div class="section-header">
-          <span class="section-kicker" data-i18n="prices.kicker">Transparent pricing</span>
-          <h2 class="section-title" data-i18n="prices.title">Estimated Repair Prices</h2>
-          <p data-i18n="prices.subtitle">Final cost depends on the fault, appliance model and required parts. The technician confirms the estimate before starting work.</p>
+          <span class="section-kicker">Przejrzysty cennik</span>
+          <h2 class="section-title">Orientacyjne ceny napraw</h2>
+          <p>Końcowy koszt zależy od usterki, modelu urządzenia i potrzebnych części. Technik potwierdza wycenę przed rozpoczęciem pracy.</p>
         </div>
 
         <div class="pricing-note">
           <div>
-            <strong data-i18n="prices.diagnostic.title">Visit + diagnostics</strong>
-            <span data-i18n="prices.diagnostic.text">from 120 PLN</span>
+            <strong>Dojazd i diagnoza</strong>
+            <span>od 120 PLN</span>
           </div>
-          <p data-i18n="prices.diagnostic.note">If you approve the repair, the diagnostic fee is usually included in the final repair price.</p>
+          <p>Jeśli zaakceptujesz naprawę, koszt diagnozy zazwyczaj jest wliczany w końcową cenę usługi.</p>
         </div>
 
         <div class="pricing-grid">
           <article class="price-card">
-            <h3 data-i18n="prices.fridge.title">Refrigerator repair</h3>
-            <p data-i18n="prices.fridge.range">approx. 250–450 PLN + parts</p>
-            <span data-i18n="prices.fridge.note">Cooling, thermostat, fan, leaks, noisy operation.</span>
+            <h3>Naprawa lodówki</h3>
+            <p>ok. 250-450 PLN + części</p>
+            <span>Chłodzenie, termostat, wentylator, wycieki, głośna praca.</span>
           </article>
           <article class="price-card">
-            <h3 data-i18n="prices.washer.title">Washing machine repair</h3>
-            <p data-i18n="prices.washer.range">approx. 220–420 PLN + parts</p>
-            <span data-i18n="prices.washer.note">Drainage, pump, belt, spin, door lock, leaks.</span>
+            <h3>Naprawa pralki</h3>
+            <p>ok. 220-420 PLN + części</p>
+            <span>Odpływ, pompa, pasek, wirowanie, blokada drzwi, wycieki.</span>
           </article>
           <article class="price-card">
-            <h3 data-i18n="prices.dishwasher.title">Dishwasher repair</h3>
-            <p data-i18n="prices.dishwasher.range">approx. 220–400 PLN + parts</p>
-            <span data-i18n="prices.dishwasher.note">Water intake, drain pump, leaks, heating, error codes.</span>
+            <h3>Naprawa zmywarki</h3>
+            <p>ok. 220-400 PLN + części</p>
+            <span>Pobór wody, pompa odpływowa, wycieki, grzanie, błędy.</span>
           </article>
           <article class="price-card">
-            <h3 data-i18n="prices.oven.title">Oven & stove repair</h3>
-            <p data-i18n="prices.oven.range">approx. 200–380 PLN + parts</p>
-            <span data-i18n="prices.oven.note">Heating elements, ignition, sensors and control modules.</span>
+            <h3>Naprawa piekarnika i kuchenki</h3>
+            <p>ok. 200-380 PLN + części</p>
+            <span>Grzałki, zapłon, czujniki i moduły sterujące.</span>
           </article>
           <article class="price-card">
-            <h3 data-i18n="prices.dryer.title">Dryer repair</h3>
-            <p data-i18n="prices.dryer.range">approx. 220–420 PLN + parts</p>
-            <span data-i18n="prices.dryer.note">Heating, drum rotation, belt, sensors and filters.</span>
+            <h3>Naprawa suszarki</h3>
+            <p>ok. 220-420 PLN + części</p>
+            <span>Grzanie, obrót bębna, pasek, czujniki i filtry.</span>
           </article>
         </div>
 
         <div class="pricing-cta">
-          <a href="#booking" class="btn btn-primary" data-i18n="prices.cta">Request exact estimate</a>
+          <a href="#booking" class="btn btn-primary">Poproś o dokładną wycenę</a>
         </div>
       </div>
     </section>
@@ -155,25 +141,25 @@
     <section class="how-it-works">
       <div class="container">
         <div class="section-header">
-          <span class="section-kicker" data-i18n="process.kicker">Simple process</span>
-          <h2 class="section-title" data-i18n="process.title">How It Works</h2>
-          <p data-i18n="process.subtitle">Get your appliance checked and repaired in three clear steps.</p>
+          <span class="section-kicker">Prosty proces</span>
+          <h2 class="section-title">Jak to działa</h2>
+          <p>Diagnoza i naprawa urządzenia w trzech prostych krokach.</p>
         </div>
         <div class="process-grid">
           <div class="process-step">
             <div class="step-number">1</div>
-            <h3 data-i18n="process.one.title">Book an appointment</h3>
-            <p data-i18n="process.one.text">Call us or send a request through the form. We agree on a convenient service time.</p>
+            <h3>Umów wizytę</h3>
+            <p>Zadzwoń lub wyślij zgłoszenie przez formularz. Ustalimy dogodny termin wizyty.</p>
           </div>
           <div class="process-step">
             <div class="step-number">2</div>
-            <h3 data-i18n="process.two.title">Diagnosis and estimate</h3>
-            <p data-i18n="process.two.text">The technician checks the appliance and explains the issue, parts and repair cost.</p>
+            <h3>Diagnoza i wycena</h3>
+            <p>Technik sprawdza urządzenie i wyjaśnia usterkę, potrzebne części oraz koszt naprawy.</p>
           </div>
           <div class="process-step">
             <div class="step-number">3</div>
-            <h3 data-i18n="process.three.title">Professional repair</h3>
-            <p data-i18n="process.three.text">After your approval, we repair the appliance and test it before finishing the visit.</p>
+            <h3>Profesjonalna naprawa</h3>
+            <p>Po Twojej akceptacji naprawiamy urządzenie i testujemy je przed zakończeniem wizyty.</p>
           </div>
         </div>
       </div>
@@ -183,29 +169,29 @@
       <div class="container">
         <div class="about-panel">
           <div class="about-content">
-            <span class="section-kicker" data-i18n="about.kicker">About FixRight</span>
-            <h2 class="section-title" data-i18n="about.title">Reliable appliance repair backed by 10+ years of experience</h2>
-            <p data-i18n="about.p1">FixRight is a Warsaw-based home appliance repair company helping families keep essential household equipment working safely and efficiently.</p>
-            <p data-i18n="about.p2">Our technicians provide clear diagnostics, honest estimates and practical repairs for refrigerators, washing machines, dishwashers, ovens, stoves and other major household appliances.</p>
+            <span class="section-kicker">O FixRight</span>
+            <h2 class="section-title">Solidna naprawa AGD poparta ponad 10-letnim doświadczeniem</h2>
+            <p>FixRight to serwis AGD działający w Warszawie, Krakowie i okolicach. Pomagamy utrzymać najważniejsze urządzenia domowe w bezpiecznym i sprawnym stanie.</p>
+            <p>Nasi technicy zapewniają rzetelną diagnozę, uczciwą wycenę i praktyczne naprawy lodówek, pralek, zmywarek, piekarników, kuchenek oraz innych urządzeń domowych.</p>
           </div>
-          <div class="about-stats" aria-label="Company highlights">
-            <div class="stat-card"><strong data-i18n="about.stat1.num">10+</strong><span data-i18n="about.stat1.text">Years on the market</span></div>
-            <div class="stat-card"><strong data-i18n="about.stat2.num">25+</strong><span data-i18n="about.stat2.text">Qualified technicians</span></div>
-            <div class="stat-card"><strong data-i18n="about.stat3.num">12k+</strong><span data-i18n="about.stat3.text">Completed repairs</span></div>
-            <div class="stat-card"><strong data-i18n="about.stat4.num">1 year</strong><span data-i18n="about.stat4.text">Warranty on repairs</span></div>
+          <div class="about-stats" aria-label="Najważniejsze informacje o firmie">
+            <div class="stat-card"><strong>10+</strong><span>Lat na rynku</span></div>
+            <div class="stat-card"><strong>25+</strong><span>Wykwalifikowanych techników</span></div>
+            <div class="stat-card"><strong>12 tys.+</strong><span>Zrealizowanych napraw</span></div>
+            <div class="stat-card"><strong>1 rok</strong><span>Gwarancji na naprawy</span></div>
           </div>
         </div>
 
         <div class="section-header why-header">
-          <span class="section-kicker" data-i18n="why.kicker">Why choose us</span>
-          <h2 class="section-title" data-i18n="why.title">Professional service you can count on</h2>
-          <p data-i18n="why.subtitle">A strict, transparent approach to diagnostics, repair and customer communication.</p>
+          <span class="section-kicker">Dlaczego my</span>
+          <h2 class="section-title">Serwis, na którym można polegać</h2>
+          <p>Przejrzyste zasady pracy, uczciwa komunikacja i profesjonalna obsługa od pierwszego kontaktu.</p>
         </div>
         <div class="why-grid">
-          <div class="why-card"><div class="why-icon">✓</div><h3 data-i18n="why.cert.title">Certified experts</h3><p data-i18n="why.cert.text">Experienced technicians trained to work with all major household appliance brands.</p></div>
-          <div class="why-card"><div class="why-icon">FAST</div><h3 data-i18n="why.fast.title">Same-day service</h3><p data-i18n="why.fast.text">Fast response during working hours, with same-day visits when technician availability allows.</p></div>
-          <div class="why-card"><div class="why-icon">PLN</div><h3 data-i18n="why.price.title">Clear pricing</h3><p data-i18n="why.price.text">You receive an estimate before the repair begins. No unclear fees.</p></div>
-          <div class="why-card"><div class="why-icon">1Y</div><h3 data-i18n="why.warranty.title">Repair warranty</h3><p data-i18n="why.warranty.text">Warranty coverage on completed repairs for additional peace of mind.</p></div>
+          <div class="why-card"><div class="why-icon">&#10003;</div><h3>Doświadczeni technicy</h3><p>Specjaliści przygotowani do pracy z najpopularniejszymi markami sprzętu AGD.</p></div>
+          <div class="why-card"><div class="why-icon">24h</div><h3>Szybki termin</h3><p>Sprawna reakcja w godzinach pracy i wizyty tego samego dnia, jeśli pozwala na to grafik.</p></div>
+          <div class="why-card"><div class="why-icon">PLN</div><h3>Jasna wycena</h3><p>Przed rozpoczęciem naprawy otrzymujesz kosztorys. Bez niejasnych dopłat.</p></div>
+          <div class="why-card"><div class="why-icon">1R</div><h3>Gwarancja naprawy</h3><p>Wykonane naprawy są objęte gwarancją, co daje większy spokój po wizycie technika.</p></div>
         </div>
       </div>
     </section>
@@ -213,9 +199,9 @@
     <section class="brands">
       <div class="container">
         <div class="section-header">
-          <span class="section-kicker" data-i18n="brands.kicker">Major brands</span>
-          <h2 class="section-title" data-i18n="brands.title">Brands We Service</h2>
-          <p data-i18n="brands.subtitle">We work with popular European and international appliance brands.</p>
+          <span class="section-kicker">Popularne marki</span>
+          <h2 class="section-title">Marki, które serwisujemy</h2>
+          <p>Obsługujemy popularne europejskie i międzynarodowe marki AGD.</p>
         </div>
         <div class="brands-grid">
           <div class="brand-item">Samsung</div><div class="brand-item">LG</div><div class="brand-item">Whirlpool</div><div class="brand-item">Bosch</div><div class="brand-item">Electrolux</div><div class="brand-item">Beko</div><div class="brand-item">Siemens</div><div class="brand-item">Amica</div>
@@ -226,34 +212,34 @@
     <section class="faq-section" id="faq">
       <div class="container">
         <div class="section-header">
-          <span class="section-kicker" data-i18n="faq.kicker">FAQ</span>
-          <h2 class="section-title" data-i18n="faq.title">Frequently Asked Questions</h2>
-          <p data-i18n="faq.subtitle">Real questions customers usually ask before ordering appliance repair.</p>
+          <span class="section-kicker">Pytania i odpowiedzi</span>
+          <h2 class="section-title">Najczęściej zadawane pytania</h2>
+          <p>Odpowiedzi na pytania, które klienci najczęściej zadają przed zamówieniem naprawy AGD.</p>
         </div>
         <div class="faq-accordion">
           <div class="faq-item active">
-            <button class="faq-question" type="button" aria-expanded="true"><span data-i18n="faq.q1">How much does appliance repair cost in Poland?</span><span class="faq-symbol">−</span></button>
-            <div class="faq-answer"><p data-i18n="faq.a1">The price depends on the appliance type, fault and parts required. Visit + diagnostics starts from <strong>120 PLN</strong>. We provide a clear estimate before starting the repair. <a href="#booking">Request a price estimate</a>.</p></div>
+            <button class="faq-question" type="button" aria-expanded="true"><span>Ile kosztuje naprawa AGD w Polsce?</span><span class="faq-symbol">-</span></button>
+            <div class="faq-answer"><p>Cena zależy od rodzaju urządzenia, usterki oraz potrzebnych części. Dojazd i diagnostyka zaczynają się od <strong>120 PLN</strong>. Przed naprawą zawsze podajemy jasną wycenę. <a href="#booking">Poproś o wycenę</a>.</p></div>
           </div>
           <div class="faq-item">
-            <button class="faq-question" type="button" aria-expanded="false"><span data-i18n="faq.q2">Can a technician come today?</span><span class="faq-symbol">+</span></button>
-            <div class="faq-answer"><p data-i18n="faq.a2">Same-day visits are often possible in Warsaw, depending on technician availability and your district. Send a request and we will confirm the nearest available time.</p></div>
+            <button class="faq-question" type="button" aria-expanded="false"><span>Czy technik może przyjechać dzisiaj?</span><span class="faq-symbol">+</span></button>
+            <div class="faq-answer"><p>W Warszawie i Krakowie często możliwa jest wizyta tego samego dnia, zależnie od dostępności techników i Twojej lokalizacji.</p></div>
           </div>
           <div class="faq-item">
-            <button class="faq-question" type="button" aria-expanded="false"><span data-i18n="faq.q3">Do you provide a warranty for the repair?</span><span class="faq-symbol">+</span></button>
-            <div class="faq-answer"><p data-i18n="faq.a3">Yes. Completed repairs are covered by a service warranty. Warranty terms depend on the repair type and installed parts.</p></div>
+            <button class="faq-question" type="button" aria-expanded="false"><span>Czy udzielacie gwarancji na naprawę?</span><span class="faq-symbol">+</span></button>
+            <div class="faq-answer"><p>Tak. Wykonane naprawy są objęte gwarancją serwisową. Jej zakres zależy od rodzaju naprawy i zastosowanych części.</p></div>
           </div>
           <div class="faq-item">
-            <button class="faq-question" type="button" aria-expanded="false"><span data-i18n="faq.q4">What appliances do you repair?</span><span class="faq-symbol">+</span></button>
-            <div class="faq-answer"><p data-i18n="faq.a4">We repair refrigerators, washing machines, dishwashers, ovens, stoves, dryers and other common household appliances from major brands.</p></div>
+            <button class="faq-question" type="button" aria-expanded="false"><span>Jakie urządzenia naprawiacie?</span><span class="faq-symbol">+</span></button>
+            <div class="faq-answer"><p>Naprawiamy lodówki, pralki, zmywarki, piekarniki, kuchenki, suszarki oraz inne popularne urządzenia domowe największych marek.</p></div>
           </div>
           <div class="faq-item">
-            <button class="faq-question" type="button" aria-expanded="false"><span data-i18n="faq.q5">Do I need to bring the appliance to your service center?</span><span class="faq-symbol">+</span></button>
-            <div class="faq-answer"><p data-i18n="faq.a5">In most cases, no. We provide in-home service, so the technician comes to your address and checks the appliance on site.</p></div>
+            <button class="faq-question" type="button" aria-expanded="false"><span>Czy muszę przywieźć sprzęt do serwisu?</span><span class="faq-symbol">+</span></button>
+            <div class="faq-answer"><p>W większości przypadków nie. Oferujemy serwis u klienta, więc technik przyjeżdża pod wskazany adres i sprawdza urządzenie na miejscu.</p></div>
           </div>
           <div class="faq-item">
-            <button class="faq-question" type="button" aria-expanded="false"><span data-i18n="faq.q6">What should I prepare before the technician arrives?</span><span class="faq-symbol">+</span></button>
-            <div class="faq-answer"><p data-i18n="faq.a6">Please provide access to the appliance, remove items around it and, if possible, prepare the model number or a photo of the error code.</p></div>
+            <button class="faq-question" type="button" aria-expanded="false"><span>Co przygotować przed przyjazdem technika?</span><span class="faq-symbol">+</span></button>
+            <div class="faq-answer"><p>Wystarczy zapewnić dostęp do urządzenia, odsunąć rzeczy stojące obok oraz przygotować numer modelu lub zdjęcie kodu błędu, jeśli je masz.</p></div>
           </div>
         </div>
       </div>
@@ -262,14 +248,14 @@
     <section class="reviews-section" id="reviews">
       <div class="container">
         <div class="section-header">
-          <span class="section-kicker" data-i18n="reviews.kicker">Customer feedback</span>
-          <h2 class="section-title" data-i18n="reviews.title">Customers Trust Our Technicians</h2>
-          <p data-i18n="reviews.subtitle">Reviews from customers in Warsaw and Kraków after real appliance service visits.</p>
+          <span class="section-kicker">Opinie klientów</span>
+          <h2 class="section-title">Klienci ufają naszym technikom</h2>
+          <p>Opinie klientów z Warszawy i Krakowa po rzeczywistych wizytach serwisowych.</p>
         </div>
         <div class="test-grid">
-          <div class="test-card"><div class="stars" aria-label="5 out of 5">★★★★★</div><p data-i18n="reviews.r1">“The technician quickly found the problem with our washing machine and explained the cost before repair.”</p><strong data-i18n="reviews.n1">Anna K., Warsaw</strong></div>
-          <div class="test-card"><div class="stars" aria-label="4 out of 5">★★★★☆</div><p data-i18n="reviews.r2">“Professional service and clear communication. The fridge works normally again. The visit started a little later than planned, but the repair was done well.”</p><strong data-i18n="reviews.n2">Marek S., Warsaw</strong></div>
-          <div class="test-card"><div class="stars" aria-label="5 out of 5">★★★★★</div><p data-i18n="reviews.r3">“Good service in Kraków. The dishwasher was diagnosed on site and repaired during the same visit.”</p><strong data-i18n="reviews.n3">Katarzyna P., Kraków</strong></div>
+          <div class="test-card"><div class="stars" aria-label="5 na 5">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>&bdquo;Technik szybko znalazł problem z pralką i wyjaśnił koszt przed naprawą.&rdquo;</p><strong>Anna K., Warszawa</strong></div>
+          <div class="test-card"><div class="stars" aria-label="4 na 5">&#9733;&#9733;&#9733;&#9733;&#9734;</div><p>&bdquo;Profesjonalna obsługa i jasna komunikacja. Lodówka znów działa normalnie.&rdquo;</p><strong>Marek S., Warszawa</strong></div>
+          <div class="test-card"><div class="stars" aria-label="5 na 5">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>&bdquo;Dobry serwis w Krakowie. Zmywarka została naprawiona podczas tej samej wizyty.&rdquo;</p><strong>Katarzyna P., Kraków</strong></div>
         </div>
       </div>
     </section>
@@ -277,28 +263,28 @@
     <section class="booking-section" id="booking">
       <div class="container booking-inner single-form">
         <div class="booking-form-wrap">
-          <h2 class="section-title" data-i18n="form.title">Book Service Now</h2>
+          <h2 class="section-title">Zamów serwis</h2>
           <form id="booking-form" class="booking-form" novalidate>
-            <div class="form-group"><input type="text" id="name" name="name" class="form-input" data-i18n-placeholder="form.name" placeholder="First and last name *" autocomplete="name"><span class="form-error" id="name-error"></span></div>
-            <div class="form-group"><input type="tel" id="phone" name="phone" class="form-input" data-i18n-placeholder="form.phone" placeholder="Phone Number *" autocomplete="tel"><span class="form-error" id="phone-error"></span></div>
-            <div class="form-group"><input type="email" id="email" name="email" class="form-input" data-i18n-placeholder="form.email" placeholder="Email address" autocomplete="email"><span class="form-error" id="email-error"></span></div>
+            <div class="form-group"><input type="text" id="name" name="name" class="form-input" placeholder="Imię i nazwisko *" autocomplete="name" /><span class="form-error" id="name-error"></span></div>
+            <div class="form-group"><input type="tel" id="phone" name="phone" class="form-input" placeholder="Numer telefonu *" autocomplete="tel" /><span class="form-error" id="phone-error"></span></div>
+            <div class="form-group"><input type="email" id="email" name="email" class="form-input" placeholder="Adres e-mail" autocomplete="email" /><span class="form-error" id="email-error"></span></div>
             <div class="form-group">
               <select id="appliance_type" name="appliance_type" class="form-input form-select" required>
-                <option value="" data-i18n="form.appliance.placeholder">Appliance type *</option>
-                <option value="refrigerator" data-i18n="form.appliance.fridge">Refrigerator</option>
-                <option value="washing-machine" data-i18n="form.appliance.washer">Washing machine</option>
-                <option value="dishwasher" data-i18n="form.appliance.dishwasher">Dishwasher</option>
-                <option value="oven-stove" data-i18n="form.appliance.oven">Oven or stove</option>
-                <option value="dryer" data-i18n="form.appliance.dryer">Dryer</option>
-                <option value="other" data-i18n="form.appliance.other">Other appliance</option>
+                <option value="">Typ urządzenia *</option>
+                <option value="refrigerator">Lodówka</option>
+                <option value="washing-machine">Pralka</option>
+                <option value="dishwasher">Zmywarka</option>
+                <option value="oven-stove">Piekarnik lub kuchenka</option>
+                <option value="dryer">Suszarka</option>
+                <option value="other">Inne urządzenie</option>
               </select>
             </div>
-            <div class="form-group"><textarea id="problem_description" name="problem_description" class="form-input form-textarea" rows="4" data-i18n-placeholder="form.problem" placeholder="Describe the problem *"></textarea><span class="form-error" id="problem-error"></span></div>
-            <button type="submit" class="btn btn-primary btn-full" id="submit-btn"><span class="btn-text" data-i18n="form.submit">Request repair →</span><span class="btn-loader" hidden>Sending…</span></button>
+            <div class="form-group"><textarea id="problem_description" name="problem_description" class="form-input form-textarea" rows="4" placeholder="Opisz problem *"></textarea><span class="form-error" id="problem-error"></span></div>
+            <button type="submit" class="btn btn-primary btn-full" id="submit-btn"><span class="btn-text">Wyślij zgłoszenie &rarr;</span><span class="btn-loader" hidden>Wysyłanie...</span></button>
           </form>
           <div class="form-success" id="form-success" hidden>
-            <h3 data-i18n="form.success.title">Request received!</h3>
-            <p data-i18n="form.success.text">We will contact you shortly to confirm the appointment time.</p>
+            <h3>Zgłoszenie przyjęte</h3>
+            <p>Skontaktujemy się z Tobą, aby potwierdzić termin wizyty.</p>
           </div>
         </div>
       </div>
@@ -308,47 +294,47 @@
   <footer class="site-footer">
     <div class="container footer-top">
       <div class="footer-brand">
-        <a href="#home" class="footer-logo" aria-label="FixRight Home"><img src="logo.svg" alt="FixRight Logo" class="footer-logo-img"><span>Fix<strong>Right</strong></span></a>
-        <p data-i18n="footer.desc">Trusted appliance repair across Poland: refrigerators, washing machines, ovens, stoves and dishwashers in Warsaw, Kraków and nearby areas.</p>
+        <a href="#home" class="footer-logo" aria-label="FixRight strona główna"><img src="logo.svg" alt="Logo FixRight" class="footer-logo-img" /><span>Fix<strong>Right</strong></span></a>
+        <p>Zaufany serwis AGD w Warszawie, Krakowie i okolicach: lodówki, pralki, piekarniki, kuchenki i zmywarki. Szybka diagnoza, jasna wycena i profesjonalna obsługa.</p>
       </div>
       <div class="footer-col">
-        <h4 data-i18n="footer.contact">Contact Info</h4>
-        <p>📞 <a href="tel:+48221234567">+48 22 123 45 67</a></p>
-        <p>✉ <a href="mailto:kontakt@fixright.pl">kontakt@fixright.pl</a></p>
-        <p data-i18n="footer.address.warsaw">📍 Warsaw: ul. Marszałkowska 58, 00-545 Warszawa</p>
-        <p data-i18n="footer.address.krakow">📍 Kraków: ul. Karmelicka 34, 31-128 Kraków</p>
+        <h4>Kontakt</h4>
+        <p>&#128222; <a href="tel:+48221234567">+48 22 123 45 67</a></p>
+        <p>&#9993; <a href="mailto:kontakt@fixright.pl">kontakt@fixright.pl</a></p>
+        <p>&#128205; Warszawa: ul. Marszałkowska 58, 00-545 Warszawa</p>
+        <p>&#128205; Kraków: ul. Karmelicka 34, 31-128 Kraków</p>
       </div>
       <div class="footer-col">
-        <h4 data-i18n="footer.hours">Working Hours</h4>
-        <p data-i18n="footer.hours.week">Monday - Friday: 8:00 - 20:00</p>
-        <p data-i18n="footer.hours.sat">Saturday: 9:00 - 17:00</p>
-        <p data-i18n="footer.hours.sun">Sunday: emergency service by request</p>
+        <h4>Godziny pracy</h4>
+        <p>Poniedziałek - piątek: 8:00 - 20:00</p>
+        <p>Sobota: 9:00 - 17:00</p>
+        <p>Niedziela: awaryjnie po uzgodnieniu</p>
       </div>
       <div class="footer-col">
-        <h4 data-i18n="footer.links">Quick Links</h4>
-        <a href="#home" data-i18n="nav.home">Home</a>
-        <a href="#services" data-i18n="nav.services">Services</a>
-        <a href="#about" data-i18n="nav.about">About Us</a>
-        <a href="#prices" data-i18n="nav.prices">Prices</a>
-        <a href="#booking" data-i18n="footer.book">Book Service</a>
+        <h4>Szybkie linki</h4>
+        <a href="#home">Start</a>
+        <a href="#services">Usługi</a>
+        <a href="#about">O nas</a>
+        <a href="#prices">Cennik</a>
+        <a href="#booking">Zamów serwis</a>
       </div>
     </div>
     <div class="container footer-service-strip">
-      <div class="footer-badge" data-i18n="footer.badge1">Licensed & insured</div>
-      <div class="footer-badge" data-i18n="footer.badge2">Quality replacement parts</div>
-      <div class="footer-badge" data-i18n="footer.badge3">Warranty on repairs</div>
-      <div class="footer-badge" data-i18n="footer.badge4">Service in Warsaw & Kraków</div>
+      <div class="footer-badge">Licencja i ubezpieczenie</div>
+      <div class="footer-badge">Sprawdzone części zamienne</div>
+      <div class="footer-badge">Gwarancja na naprawy</div>
+      <div class="footer-badge">Serwis w Warszawie i Krakowie</div>
     </div>
     <div class="container footer-legal">
-      <a href="privacy-policy.html" data-i18n="footer.privacy">Privacy Policy</a>
-      <a href="terms-of-service.html" data-i18n="footer.terms">Terms of Service</a>
-      <a href="service-areas.html" data-i18n="footer.areas">Service Areas</a>
-      <a href="warranty-information.html" data-i18n="footer.warranty">Warranty Information</a>
+      <a href="privacy-policy.html">Polityka prywatności</a>
+      <a href="terms-of-service.html">Regulamin</a>
+      <a href="service-areas.html">Obszar działania</a>
+      <a href="warranty-information.html">Informacje o gwarancji</a>
     </div>
     <div class="footer-bottom">
       <div class="container footer-bottom-inner">
-        <p data-i18n="footer.copy">© 2026 FixRight. All Rights Reserved.</p>
-        <p data-i18n="footer.note">Home appliance repair service in Poland.</p>
+        <p>&copy; 2026 FixRight. Wszelkie prawa zastrzeżone.</p>
+        <p>Serwis naprawy AGD w Polsce.</p>
       </div>
     </div>
   </footer>
