@@ -4,7 +4,7 @@ from typing import Literal
 
 from pydantic import BaseModel, Field, field_validator
 
-PHONE_RE = re.compile(r"^[\d\s()+-]{7,25}$")
+PHONE_RE = re.compile(r"^\+?[\d\s()-]{9,20}$")
 EMAIL_RE = re.compile(r"^[^\s@]+@[^\s@]+\.[^\s@]+$")
 
 APPLIANCE_TYPES = {
@@ -47,8 +47,18 @@ class BookingRequest(BaseModel):
     def phone_valid(cls, value: str) -> str:
         stripped = value.strip()
         digits_only = re.sub(r"\D", "", stripped)
-        if not PHONE_RE.match(stripped) or not 7 <= len(digits_only) <= 15:
-            raise ValueError("enter a valid phone number")
+
+        if not PHONE_RE.match(stripped):
+            raise ValueError("enter a valid Polish mobile number")
+
+        if digits_only.startswith("48"):
+            national_number = digits_only[2:]
+        else:
+            national_number = digits_only
+
+        if len(national_number) != 9 or not national_number.startswith(("4", "5", "6", "7", "8")):
+            raise ValueError("enter a valid Polish mobile number")
+
         return stripped
 
     @field_validator("email")

@@ -172,9 +172,12 @@ document.addEventListener("DOMContentLoaded", () => {
       valid = false;
     }
 
-    const digitsCount = values.phone.replace(/\D/g, "").length;
-    if (digitsCount < 7 || digitsCount > 15) {
-      setFieldError("phone", "Podaj poprawny numer telefonu.");
+    const digitsOnly = values.phone.replace(/\D/g, "");
+    const nationalNumber = digitsOnly.startsWith("48") ? digitsOnly.slice(2) : digitsOnly;
+    const isPolishMobile = /^[4-8]\d{8}$/.test(nationalNumber);
+
+    if (!/^\+?[\d\s()-]{9,20}$/.test(values.phone) || !isPolishMobile) {
+      setFieldError("phone", "Podaj poprawny polski numer komórkowy.");
       valid = false;
     }
 
@@ -234,7 +237,7 @@ document.addEventListener("DOMContentLoaded", () => {
               const fieldName = issue.loc?.[issue.loc.length - 1];
               if (fieldName && errorNodes[fieldName]) {
                 const message = fieldName === "phone"
-                  ? "Podaj poprawny numer telefonu."
+                  ? "Podaj poprawny polski numer komórkowy."
                   : fieldName === "email"
                     ? "Podaj poprawny adres e-mail."
                     : "Sprawdź to pole.";

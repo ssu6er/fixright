@@ -75,7 +75,7 @@ Example request body:
 ```json
 {
   "name": "Jane Smith",
-  "phone": "(555) 867-5309",
+  "phone": "+48 501 234 567",
   "problem_description": "My refrigerator stopped cooling overnight."
 }
 ```
@@ -83,7 +83,7 @@ Example request body:
 Validation rules:
 
 - `name`: 2 to 120 characters;
-- `phone`: must be a valid US phone number;
+- `phone`: must be a valid Polish mobile number;
 - `problem_description`: 10 to 2000 characters.
 
 ### Admin endpoints
